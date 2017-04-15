@@ -1,0 +1,20 @@
+<h2>Colors</h2>
+
+<span><a href = "/pink">Pink</a></span>
+<span><a href = "/blue">Blue</a></span>
+<span><a href = "/Yellow">Yellow</a></span>
+<br>
+<br>
+<img src = "./img/loop.gif">
+
+<ul>
+  <% colors.forEach((singleColor) => { %>
+    <div class = "colorBox">
+    <li>
+      <%= singleColor.keyword.toUpperCase() %>
+      <p>Hex: <%= singleColor.hex %></p>
+    </li>
+    </div>
+
+    <% }); %>
+  </ul>

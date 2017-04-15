@@ -1,0 +1,17 @@
+<h2>Pink</h2>
+
+<span><a href = "/pink" class = "button">Pink</a></span>
+<span><a href = "/blue" class = "button">Blue</a></span>
+<span><a href = "/yellow" class = "button">Yellow</a></span>
+
+<ul>
+  <% colors.forEach((singleColor) => { %>
+      <% if (singleColor.category == "pink") { %>
+        <% currentColor = singleColor %>
+            <li><%= currentColor.keyword %></li>
+      <% } %>
+
+
+
+    <% }); %>
+  </ul>
