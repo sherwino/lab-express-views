@@ -1,17 +1,29 @@
 <h2>Pink</h2>
 
-<span><a href = "/pink" class = "button">Pink</a></span>
-<span><a href = "/blue" class = "button">Blue</a></span>
-<span><a href = "/yellow" class = "button">Yellow</a></span>
+<div class= "colorNav">
+  <span><a href = "/pink" class="btn btn-default">Pink</a></span>
+  <span><a href = "/blue" class="btn btn-primary">Blue</a></span>
+  <span><a href = "/Yellow" class="btn btn-warning">Yellow</a></span>
+  <br>
+  <br>
+</div>
 
-<ul>
+<section class="colors">
+
+<ul class ="row">
   <% colors.forEach((singleColor) => { %>
-      <% if (singleColor.category == "pink") { %>
-        <% currentColor = singleColor %>
-            <li><%= currentColor.keyword %></li>
+    <% if (singleColor.category == "pink") { %>
+      <% currentColor = singleColor %>
+    <div class = "colorBox col-sm-6">
+    <li>
+      <div class = "innerBox" style=" background-color: <%= currentColor.hex %> "></div>
+      <div class ="colorName"><%= currentColor.keyword %></div>
+      <div class ="colorHex"> Hex: <%= currentColor.hex %></div>
+    </li>
       <% } %>
-
-
+    </div>
 
     <% }); %>
   </ul>
+
+</section>

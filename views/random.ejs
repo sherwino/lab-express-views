@@ -1,0 +1,27 @@
+<h2>Random</h2>
+
+<div class= "colorNav">
+  <span><a href = "/pink" class="btn btn-default">Pink</a></span>
+  <span><a href = "/blue" class="btn btn-primary">Blue</a></span>
+  <span><a href = "/Yellow" class="btn btn-warning">Yellow</a></span>
+  <br>
+  <br>
+</div>
+
+<section class="colors">
+
+<ul class ="row forOne">
+  <% currentColor = Math.floor(Math.random() * colors.length ); %>
+    <% selectedColor = colors[currentColor]; %>
+
+    <div class = "colorBox cbox-bigger col-md-6">
+    <li>
+      <div class = "innerBox ibox-bigger" style=" background-color: <%= selectedColor.hex %> "></div>
+      <div class ="colorName cn-bigger"><%= selectedColor.keyword %></div>
+      <div class ="colorHex ch-bigger"> Hex: <%= selectedColor.hex %></div>
+    </li>
+    </div>
+
+  </ul>
+
+</section>

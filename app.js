@@ -22,11 +22,11 @@ app.get('/', (req, res, next) => {
   res.render('home.ejs');
 });
 
-app.get('/about', (req, res, next) =>{
+app.get('/about', (req, res, next) => {
   res.render('about.ejs');
 });
 
-app.get('/colors', (req, res, next) =>{
+app.get('/colors', (req, res, next) => {
   res.render('colors.ejs',
   { colors: colors });
 });
@@ -46,10 +46,9 @@ app.get('/yellow', (req, res, next) => {
   { colors: colors });
 });
 
-app.get('/food', (req, res, next) =>{
-  res.render('food-view.ejs',
-  { foodList: foodList } //arguments or variables being passed to the squids in the .ejs files
-  );
+app.get('/random', (req, res, next) => {
+  res.render('random.ejs',
+  { colors: colors });
 });
 
 app.listen(3000);
